@@ -1,0 +1,204 @@
+:root {
+  --blue-gothic: #003f8a;
+  --red-gothic: #8b0015;
+  --green-gothic: #2e6e3d;
+  --gold-gothic: #d4a017;
+  --violet-gothic: #4e2f70;
+
+  --stone-ash-gothic: #e6e2da;
+  --stone-mortar-gothic: #d1ccc2;
+  --tracery-dark-gothic: #2c2c2c;
+  --lead-gray-gothic: #555555;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: var(--blue-gothic);
+  padding-left: 10px;
+}
+
+.h2-red {
+  border-left: 4px solid var(--red-gothic);
+}
+
+.h2-blue {
+  border-left: 4px solid var(--blue-gothic);
+}
+
+.h2-green {
+  border-left: 4px solid var(--green-gothic);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background: #f8f8f8;
+  color: #333;
+  padding-bottom: 40px;
+}
+
+.hero {
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: none;
+}
+
+#glass-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  filter: brightness(2)
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--stone-ash-gothic);
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(5px) brightness(0.95); 
+  box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+  border-radius: 8px;
+}
+
+.small-hero {
+  padding: 40px 20px;
+}
+
+.listing-grid {
+  max-width: 1000px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.listing-card {
+  background: white;
+  border-radius: 6px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+  transition: transform 0.2s ease;
+}
+
+.hero-img {
+  max-height: 128px;
+}
+
+.listing-card:hover {
+  transform: scale(1.075);
+}
+
+.hover-blue:hover {
+  box-shadow: 0 0 50px var(--blue-gothic);
+}
+
+.hover-red:hover {
+  box-shadow: 0 0 50px var(--red-gothic);
+}
+
+.hover-green:hover {
+  box-shadow: 0 0 50px var(--green-gothic);
+}
+
+.listing-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.listing-card h2 {
+  padding: 10px 15px 0;
+  font-size: 1.2em;
+}
+
+.listing-card .excerpt,
+.listing-card .rating {
+  padding: 0 15px 10px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.listing-page {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.amenities ul,
+.house-rules ul {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+section {
+  margin-bottom: 25px;
+}
+
+.back-link {
+  display: inline-block;
+  margin: 15px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.collapsible .content {
+  display: none;
+  margin-top: 10px;
+}
+
+.collapsible .content.open {
+  display: block;
+}
+
+.statement {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.spacer {
+  height: 1.2em;
+}
+
+.credit {
+  text-align: left;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+  font-size: 0.9em;
+}
